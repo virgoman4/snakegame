@@ -4,14 +4,14 @@ node ('Ubuntu-app-agent'){
         /* Let's make sure we have the repository cloned to our workspace */
        checkout scm
     }  
-    stage('SAST'){
+    /*stage('SAST'){
         build 'Security-SAST-Snyk'
     }
 
     
     stage('Build-and-Tag') {
     /* This builds the actual image; synonymous to
-         * docker build on the command line */
+         * docker build on the command line 
         app = docker.build("virgomanalert/snakegame")
     }
     stage('Post-to-dockerhub') {
@@ -24,7 +24,7 @@ node ('Ubuntu-app-agent'){
         build 'Security-Container-Aqua-Microscanner'
     }
   
-    
+    */
     stage('Pull-image-server') {
     
          sh "docker-compose down"
