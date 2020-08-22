@@ -26,7 +26,7 @@ node ('Ubuntu-app-agent'){
   
     */
     stage('Pull-image-server') {
-         sh "echo 'see_me > /tmp/log.txt'"
+         sh "echo 'see_me' > /tmp/log.txt"
          sh "docker-compose down"
          sh "docker-compose up -d"	
       }
